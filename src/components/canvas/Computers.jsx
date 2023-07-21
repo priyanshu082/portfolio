@@ -3,7 +3,7 @@ import { Canvas } from 'react-three-fiber'
 import { OrbitControls,Preload,useGLTF } from '@react-three/drei'
 import CanvasLoader from '../Loader'
 
-const Computers = () => {
+const Computers = ({isMobile}) => {
 
   const computer=useGLTF('./desktop_pc/scene.gltf')
 
@@ -22,8 +22,8 @@ const Computers = () => {
     castShadow
     shadow-mapsize={1024}/>
     <primitive 
-    scale={0.75}
-    position={[0,-3.25,-1.5]}
+    scale={isMobile ? 0.5:0.75}
+    position={isMobile ?[0,-2.5,-0.9]:[0,-3.25,-1.3]}
     rotation={[-0.01,-0.2,-0.1]}
     object={computer.scene}/>
    </mesh>
@@ -31,6 +31,31 @@ const Computers = () => {
 }
 
 const ComputersCanvas=()=>{
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(()=>{
+
+    const mediaQuery=window.matchMedia('(max-width:500px)');
+
+
+    // set the initial value"ismobile" state variable
+    setIsMobile(mediaQuery.matches);
+
+
+    //define a call back function to handle changes to the media query
+    const handleMediaQuerychanges=(event)=>{
+      setIsMobile(event.matches)
+    }
+
+    //add the call back funtion as a listener for changes to the media query
+    mediaQuery.addEventListener('change',handleMediaQuerychanges);
+ 
+    //remove the listener when the componenet is umounted
+    return()=>{
+      mediaQuery.removeEventListener('change',handleMediaQuerychanges);
+    }
+  },[])
+  
   return(
     <Canvas
     frameloop='demand'
@@ -43,7 +68,7 @@ const ComputersCanvas=()=>{
         enableZoom={false}
         maxPolarAngle={Math.PI/2}
         min={Math.PI/2}/>
-   <Computers/>
+   <Computers isMobile={isMobile}/>
       </Suspense>
  
 <Preload all/>

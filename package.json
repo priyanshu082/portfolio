@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
-    "@react-three/drei": "^9.78.2",
+    "@react-three/drei": "^9.80.0",
     "autoprefixer": "^10.4.14",
     "framer-motion": "^10.12.21",
     "install": "^0.13.0",

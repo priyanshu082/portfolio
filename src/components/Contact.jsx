@@ -10,13 +10,56 @@ const Contact = () => {
 
   const formRef=useRef();
 
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [form, setForm] = useState({ 
+    name: '',
+   email: '',
+   message: '',
+   })
 
   const [loading, setLoading] = useState(false)
 
-  const handleChange=(e)=>{}
+  const handleChange=(e)=>{
+    const {name,value}=e.target;
+    setForm({...form,[name]:value})
+  }
 
-  const handleSubmit=(e)=>{}
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+
+    setLoading(true)
+
+    emailjs.send(
+      'service_fhf8qxk',
+      'template_b2vgxws',
+      {
+        from_name:form.name,
+        to_name:'Priyanshu singh',
+        from_email:form.email,
+        to_email:'priyanshusingh216@gmail.com',
+        message:form.message
+      },
+      'lTiFhnFW9KeM9zHDu'
+    )
+    .then(()=>{
+      setLoading(false);
+      alert('Thank You. I will get back to you as soon as possible.')
+
+      setForm({
+        name:'',
+        email:'',
+        message:'',
+      })
+    },(error)=>{
+      setLoading(false);
+      console.log(error)
+      alert('Something went wrong.')
+    })
+  }
+
+
+  // lTiFhnFW9KeM9zHDu
+  // 'template_b2vgxws'
+  // service_fhf8qxk 
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -28,8 +71,8 @@ const Contact = () => {
           Contact.
         </h3>
         <form
-          // ref={formRef}
-          // onSubmit={handleSubmit}
+         ref={formRef}
+         onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8">
 
 
@@ -40,7 +83,7 @@ const Contact = () => {
               type="text"
               name="name"
               value={form.name}
-              // onChange={handleChange}
+               onChange={handleChange}
               placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium" />
           </label>
@@ -53,8 +96,8 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              value={form.mail}
-              // onChange={handleChange}
+              value={form.email}
+              onChange={handleChange}
               placeholder="What's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium" />
           </label>
@@ -68,12 +111,12 @@ const Contact = () => {
               row="7"
               name="message"
               value={form.message}
-              // onChange={handleChange}
+               onChange={handleChange}
               placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium" />
           </label>
 
-          <button type="submit" className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-orange-500 rounded-xl">
+          <button type="submit" className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-purple-600 rounded-xl">
             {loading ? 'Sending...' : 'Send'}
           </button>
 

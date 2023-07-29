@@ -8,10 +8,15 @@ import { slideIn } from "../utils/motion"
 
 const Contact = () => {
 
+  const formRef=useRef();
+
   const [form, setForm] = useState({ name: '', email: '', message: '' })
 
   const [loading, setLoading] = useState(false)
 
+  const handleChange=(e)=>{}
+
+  const handleSubmit=(e)=>{}
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -76,9 +81,9 @@ const Contact = () => {
       </motion.div>
 
       <motion.div
-      variants={slideIn('right',"tween",0.2,1)}
-      className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
-<EarthCanvas/>
+        variants={slideIn('right', "tween", 0.2, 1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
+        <EarthCanvas />
       </motion.div>
     </div>
   )

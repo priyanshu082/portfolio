@@ -11,7 +11,7 @@ const Contact = () => {
   const formRef=useRef();
 
   const [form, setForm] = useState({ 
-    name: '',
+   name: '',
    email: '',
    message: '',
    })
@@ -29,8 +29,8 @@ const Contact = () => {
     setLoading(true)
 
     emailjs.send(
-      'service_fhf8qxk',
-      'template_b2vgxws',
+      import.meta.env.VITE_APP_SERVICE_ID_KEY,
+      import.meta.env.VITE_APP_TEMPLATE_KEY,
       {
         from_name:form.name,
         to_name:'Priyanshu singh',
@@ -38,7 +38,7 @@ const Contact = () => {
         to_email:'priyanshusingh216@gmail.com',
         message:form.message
       },
-      'lTiFhnFW9KeM9zHDu'
+      import.meta.env.VITE_APP_PUBLIC_KEY
     )
     .then(()=>{
       setLoading(false);
@@ -55,8 +55,6 @@ const Contact = () => {
       alert('Something went wrong.')
     })
   }
-
-
   // lTiFhnFW9KeM9zHDu
   // 'template_b2vgxws'
   // service_fhf8qxk 
@@ -74,6 +72,7 @@ const Contact = () => {
          ref={formRef}
          onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8">
+
 
 
           <label className="flex flex-col">

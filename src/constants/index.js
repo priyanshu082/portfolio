@@ -19,10 +19,12 @@ import {
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
     tripguide,
     threejs,
+    Housee1,
+    youtube,
+    portfolio,
+    modernApp,
   } from "../assets";
   
   export const navLinks = [
@@ -45,16 +47,16 @@ import {
       title: "Web Developer",
       icon: web,
     },
+    // {
+    //   title: "React Native Developer",
+    //   icon: mobile,
+    // },
+    // {
+    //   title: "Backend Developer",
+    //   icon: backend,
+    // },
     {
-      title: "React Native Developer",
-      icon: mobile,
-    },
-    {
-      title: "Backend Developer",
-      icon: backend,
-    },
-    {
-      title: "Content Creator",
+      title: "Data Structure's and Algorithm",
       icon: creator,
     },
   ];
@@ -88,14 +90,14 @@ import {
       name: "Tailwind CSS",
       icon: tailwind,
     },
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
-    },
+    // {
+    //   name: "Node JS",
+    //   icon: nodejs,
+    // },
+    // {
+    //   name: "MongoDB",
+    //   icon: mongodb,
+    // },
     {
       name: "Three JS",
       icon: threejs,
@@ -104,14 +106,14 @@ import {
       name: "git",
       icon: git,
     },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
+    // {
+    //   name: "figma",
+    //   icon: figma,
+    // },
+    // {
+    //   name: "docker",
+    //   icon: docker,
+    // },
   ];
   
   const experiences = [
@@ -198,30 +200,56 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Hotel Booking App",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Web-based platform that allows users to search, book, and manage Hotels from various providers, providing a best hotels near you and any place you want to book hotels.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "javascript",
           color: "green-text-gradient",
         },
         {
           name: "tailwind",
           color: "pink-text-gradient",
         },
+        {
+          name: "restapi",
+          color: "green-text-gradient",
+        }
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: Housee1,
+      source_code_link: "https://github.com/priyanshu082/bookingapp",
     },
     {
-      name: "Job IT",
+      name: "Portfolio",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "A Modern lookin portfolio made by using threejs and framer-motion ,you can visit all the github repositories and can also download my resume from this website. You can send me Gmail if you want to contact me.",
+      tags: [
+        {
+          name: "react-framerMotion",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "green-text-gradient",
+        },
+        {
+          name: "threejs",
+          color: "pink-text-gradient",
+        },
+        
+      ],
+      image: portfolio,
+      source_code_link: "https://github.com/priyanshu082/portfolio",
+    },
+    {
+      name: "Youtube Clone",
+      description:
+        "It's Just a copy of youtube . Made by using restAPI and in this webApp you can search for any youtube video and you can also Play the video.",
       tags: [
         {
           name: "react",
@@ -232,34 +260,30 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "Materail UI",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: youtube,
+      source_code_link: "https://github.com/priyanshu082/youtube_clone",
     },
     {
-      name: "Trip Guide",
+      name: "Modern App",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "A simple static & responsive webDesign with dynamic looking gradients and images. A simple website for understanding the concept of components and hooks in react.",
       tags: [
         {
-          name: "nextjs",
+          name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "tailwind",
           color: "green-text-gradient",
         },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
-    },
+      image: modernApp,
+      source_code_link: "https://github.com/priyanshu082/modern-app",
+    }
   ];
   
   export { services, technologies, experiences, testimonials, projects };

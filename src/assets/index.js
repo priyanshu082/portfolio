@@ -26,9 +26,12 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import Housee1 from './Housee1.png';
+import youtube from './youtube.png';
+import portfolio from './portfolio.png';
+import modernApp from './modernapp.png'
+
 
 export {
   logo,
@@ -56,7 +59,9 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
   tripguide,
+  Housee1,
+  youtube,
+  portfolio,
+  modernApp
 };

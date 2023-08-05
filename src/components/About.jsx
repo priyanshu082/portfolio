@@ -61,9 +61,11 @@ export const About = () => {
       <motion.div className='pt-[50px]' 
       variants={fadeIn("right", "spring", 1.25, 0.75)}>
         <h3 className={styles.heroSubText}>You can dowload My resume by clicking below.</h3>
-    
-        <button  href='#' download="" className='bg-purple-600 p-[10px] rounded-2xl text-gray-300 text-[20px] font-medium mt-[20px] hover:scale-110 ease-in-out delay-100 duration-300 hover:bg-purple-500 w-1/4 green-pink-gradient'>Download</button>
+    <a href='../../priyanshuSingh.pdf' download="_priyanshuSingh.pdf">
       
+        <button className='bg-purple-600 p-[10px] rounded-2xl text-gray-300 text-[20px] font-medium mt-[20px] hover:scale-110 ease-in-out delay-100 duration-300 hover:bg-purple-500 w-1/4 green-pink-gradient'>Download</button>
+      
+    </a>
       </motion.div>
 
       

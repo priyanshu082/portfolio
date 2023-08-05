@@ -1,11 +1,12 @@
-import React,{useEffect,useState} from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
 
 import { styles } from '../styles'
 import { navLinks } from '../constants'
 import {logo,menu,close} from "../assets"
 
-const Navbar = () => {
+const Navbar = ({scrollToSection}) => {
+
 
   const [active, setActive] = useState("")
   const [toggle, setToggle] = useState(false)
@@ -28,7 +29,11 @@ const Navbar = () => {
       {navLinks.map((link)=>(
         <li 
         key={link.id}
-        onClick={()=>setActive(link.title)}
+        onClick={()=>{
+          setActive(link.title);
+        scrollToSection(link.id);
+        }
+        }
         className={`${active ===link.title ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium pb-[18px] cursor-pointer`}>
           <p href={`${link.id}`}>{link.title}</p>
         </li>

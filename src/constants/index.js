@@ -33,8 +33,8 @@ import {
       title: "About",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "projects",
+      title: "Project",
     },
     {
       id: "contact",
@@ -223,6 +223,7 @@ import {
       ],
       image: Housee1,
       source_code_link: "https://github.com/priyanshu082/bookingapp",
+      website_link:"https://bookingapp-gilt.vercel.app"
     },
     {
       name: "Portfolio",
@@ -245,6 +246,7 @@ import {
       ],
       image: portfolio,
       source_code_link: "https://github.com/priyanshu082/portfolio",
+      website_link:"/"
     },
     {
       name: "Youtube Clone",
@@ -266,6 +268,7 @@ import {
       ],
       image: youtube,
       source_code_link: "https://github.com/priyanshu082/youtube_clone",
+      website_link:"https://youtube-clone-hazel-chi.vercel.app/"
     },
     {
       name: "Modern App",
@@ -283,6 +286,7 @@ import {
       ],
       image: modernApp,
       source_code_link: "https://github.com/priyanshu082/modern-app",
+      website_link:"https://modern-app-whj8.vercel.app/"
     }
   ];
   

@@ -30,7 +30,13 @@ import tripguide from "./tripguide.png";
 import Housee1 from './Housee1.png';
 import youtube from './youtube.png';
 import portfolio from './portfolio.png';
-import modernApp from './modernapp.png'
+import modernApp from './modernapp.png';
+
+
+import github1 from "./github1.png"
+import instagram from './instagram.png'
+import discord from "./discord.png"
+import linkedin from "./linkedin.png"
 
 
 export {
@@ -63,5 +69,9 @@ export {
   Housee1,
   youtube,
   portfolio,
-  modernApp
+  modernApp,
+  github1,
+  instagram,
+  discord,
+  linkedin
 };

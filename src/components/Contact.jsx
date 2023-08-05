@@ -5,6 +5,7 @@ import { styles } from "../styles"
 import { EarthCanvas } from "./canvas"
 import SectionWrapper from "../hoc/SectionWrapper"
 import { slideIn } from "../utils/motion"
+import { profileLinks } from "../constants"
 
 const Contact = () => {
 
@@ -60,6 +61,17 @@ const Contact = () => {
   // service_fhf8qxk 
 
   return (
+    <div>
+     <motion.div
+          variants={slideIn('right', "tween", 0.2, 1)} 
+       className="flex flex-row mb-[100px] justify-center items-center space-x-[100px]">
+        {profileLinks.map((link)=>(
+            <p onClick={()=>window.open(link.link)} key={link.id} className="flex flex-col items-center justify-center hover:scale-150 ease-in-out delay-100 duration-300">
+              <img src={link.image} className="w-[80px] h-[80px]"/>
+            </p>
+        ))}
+      </motion.div>
+  
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
         variants={slideIn('left', "tween", 0.2, 1)}
@@ -127,6 +139,7 @@ const Contact = () => {
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
         <EarthCanvas />
       </motion.div>
+    </div>
     </div>
   )
 }

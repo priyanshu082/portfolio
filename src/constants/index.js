@@ -25,7 +25,44 @@ import {
     youtube,
     portfolio,
     modernApp,
+    github1,
+    instagram,
+    discord,
+    linkedin
   } from "../assets";
+
+  // import  githubfooter  from "../assets/github.svg"
+  // import instagram from "../assets/instagram.svg"
+  // import linkedin from "../assets/linkedin.svg"
+
+
+
+  export const profileLinks=[
+        {
+          id:"instagram",
+          title:"Instagram",
+          image:instagram,
+          link:"https://instagram.com/___priyanshu_singh____?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"
+        },
+        {
+          id:"linkedin",
+          title:"LinkedIn",
+          image:linkedin,
+          link:"https://www.linkedin.com/in/priyanshu-singh-a81975253/"
+        },
+        {
+          id:"git",
+          title:"GitHUb",
+          image:github1,
+          link:"https://github.com/priyanshu082"
+        },
+        {
+          id:"discord",
+          title:"Discord",
+          image:discord,
+          link:"https://discord.com/channels/@me"
+        },
+  ]
   
   export const navLinks = [
     {

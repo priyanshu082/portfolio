@@ -8,7 +8,6 @@ import SectionWrapper from "../hoc/SectionWrapper"
 import { projects } from "../constants"
 import { fadeIn, textVariant } from "../utils/motion"
 import listStyle from '../listStyle.png'
-import ImageHoverEffect from "./ImageHoverEffect";
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link,website_link }) => {
   return (
@@ -57,7 +56,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link,w
   )
 }
 
-const Works = () => {
+const Projects = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -96,4 +95,4 @@ const Works = () => {
   )
 }
 
-export default SectionWrapper(Works, "works");
+export default SectionWrapper(Projects, "projects");

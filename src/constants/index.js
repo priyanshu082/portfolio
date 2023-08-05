@@ -34,7 +34,7 @@ import {
     },
     {
       id: "projects",
-      title: "Project",
+      title: "Projects",
     },
     {
       id: "contact",

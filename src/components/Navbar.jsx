@@ -58,6 +58,7 @@ const Navbar = ({scrollToSection}) => {
         onClick={()=>{
           setToggle(!toggle)
           setActive(link.title)
+          scrollToSection(link.id);
           }}>
           <a href={`${link.id}`}>{link.title}</a>
         </li>

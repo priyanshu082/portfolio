@@ -16,7 +16,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link,w
     contentArrowStyle={{borderRight:"7-px solid #232631"}}
     iconStyle={{background:"black"}}
     icon={
-      <div className='w-full h-full items-center justify-center pl-[5px] pt-[7px]'>
+      <div className=' flex w-full h-full justify-center items-center'>
         <img 
         src={listStyle}
         alt={name}

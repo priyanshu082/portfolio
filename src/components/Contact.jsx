@@ -64,10 +64,10 @@ const Contact = () => {
     <div>
      <motion.div
           variants={slideIn('right', "tween", 0.2, 1)} 
-       className="flex flex-row mb-[100px] justify-center items-center space-x-[100px]">
+       className="flex flex-row mb-[50px] xs:mb-[70px] sm:mb-[100px] justify-center items-center space-x-[30px] xs:space-x-[55px] sm:space-x-[75px]">
         {profileLinks.map((link)=>(
             <p onClick={()=>window.open(link.link)} key={link.id} className="flex flex-col items-center justify-center hover:scale-150 ease-in-out delay-100 duration-300">
-              <img src={link.image} className="w-[80px] h-[80px]"/>
+              <img src={link.image} className="w-[55px] h-[55px] xs:w-[65px] xs:h-[65px] sm:w-[70px] sm:h-[70px]"/>
             </p>
         ))}
       </motion.div>
